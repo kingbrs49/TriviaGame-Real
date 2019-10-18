@@ -1,0 +1,59 @@
+body {
+    background-color: #AA0000;
+}
+
+h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px #e21313;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+    color: #B3995D;
+}
+
+p {
+    font-size: 10px;
+    text-align: center;
+}
+
+.card-body {
+    background-color: #AA0000;
+    color: #ffffff;
+}
+
+.question, footer {
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+    font-size: 18px;
+    font-weight: 600;
+    color: #B3995D;
+}
+
+.answers {
+    text-align: center;
+    color: #D3D3D3
+}
+
+#results {
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'digitalClockFont';
+    src: url(C:/Users/paulo/bootcamp/TriviaGame/assets/css/digital-7.regular.ttf)
+}
+
+#timer {
+    text-align: center;
+    color: #B3995D;
+    font-size: 48px;
+    font-family: 'digitalClockFont';
+    font-weight: 400;
+    text-shadow: 1px 1px #000000
+}
