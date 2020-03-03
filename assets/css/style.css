@@ -46,7 +46,7 @@ p {
 
 @font-face {
     font-family: 'digitalClockFont';
-    src: url(C:/Users/paulo/bootcamp/TriviaGame-Real/assets/css/digital-7.regular.ttf)
+    src: url(../css/digital-7.regular.ttf)
 }
 
 #timer {
