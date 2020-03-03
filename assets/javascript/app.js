@@ -6,16 +6,25 @@ function createQuiz(questions, quizContainer, resultsContainer, submitQuestions)
             answers = [];
             for (letter in questions[i].answers) {
                 answers.push(
-                    '<label>'
-                    + '<input type="radio" name="question' + i + '" value="' + letter + '">'
-                    + letter + ': '
-                    + questions[i].answers[letter]
-                    + '</label>'
+                    '<label>' + 
+                    '<input type="radio" name="question' + 
+                    i + 
+                    '" value="' + 
+                    letter + 
+                    '">' + 
+                    letter + 
+                    ': ' + 
+                    questions[i].answers[letter] + 
+                    '</label>'
                 );
             }
             output.push(
-                '<div class="question">' + questions[i].question + '</div>'
-                + '<div class="answers">' + answers.join('') + '</div>'
+                '<div class="question">' + 
+                questions[i].question + 
+                '</div>' + 
+                '<div class="answers">' + 
+                answers.join('') + 
+                '</div>'
             );
         }
         quizContainer.innerHTML = output.join('');
@@ -30,7 +39,7 @@ function createQuiz(questions, quizContainer, resultsContainer, submitQuestions)
         var timeoutHandle;
         function tick() {
             var counter = document.getElementById("timer");
-            var current_minutes = mins - 1
+            var current_minutes = mins - 1;
             seconds--;
             counter.innerHTML = current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
             if (seconds > 0) {
@@ -81,7 +90,7 @@ function createQuiz(questions, quizContainer, resultsContainer, submitQuestions)
 
 var ninerQuestions = [
     {
-        question: '<i>' + "In what year did the 49ers win their FIRST Super Bowl title?" + '</i>',
+        question: '<i>' + "In what YEAR (NOT season) did the 49ers win their FIRST Super Bowl title?" + '</i>',
         answers: {
             a: '<b>' + "1979" + '</b>',
             b: '<b>' + "1980" + '</b>',
@@ -191,7 +200,7 @@ var ninerQuestions = [
         correctAnswer: "b"
     },
     {
-        question: '<i>' + "The last time the 49ers reached the Super Bowl was in 2013. Which team did they beat for the NFC Championship, en route to the Big Game?" + '</i>',
+        question: '<i>' + "The last time the 49ers reached the Super Bowl was in the 2019 season. Which team did they beat for the NFC Championship, en route to the Big Game?" + '</i>',
         answers: {
             a: '<b>' + "New York Giants" + '</b>',
             b: '<b>' + "Green Bay Packers" + '</b>',
@@ -199,7 +208,7 @@ var ninerQuestions = [
             d: '<b>' + "New Orleans Saints" + '</b>',
             e: '<b>' + "Atlanta Falcons" + '</b>'
         },
-        correctAnswer: "e"
+        correctAnswer: "b"
     },
     {
         question: '<i>' + "The last time the 49ers had the No. 1 overall pick in the NFL Draft, they took quarterback Alex Smith, from which school?" + '</i>',
@@ -213,7 +222,7 @@ var ninerQuestions = [
         correctAnswer: "a"
     },
     {
-        question: '<i>' + "Which current NFL quarterback famously grew up as a San Francisco 49ers, and Joe Montana, fan?" + '</i>',
+        question: '<i>' + "Which NFL quarterback famously grew up as a San Francisco 49ers, and Joe Montana, fan?" + '</i>',
         answers: {
             a: '<b>' + "Aaron Rodgers" + '</b>',
             b: '<b>' + "Tom Brady" + '</b>',
@@ -224,7 +233,7 @@ var ninerQuestions = [
         correctAnswer: "b"
     },
     {
-        question: '<i>' + "The following defensive players were picked in the first round of the NFL Draft by the 49ers in the last TEN years, EXCEPT:" + '</i>',
+        question: '<i>' + "The following defensive players were picked in the first round of the NFL Draft by the 49ers since 2010, EXCEPT:" + '</i>',
         answers: {
             a: '<b>' + "Solomon Thomas" + '</b>',
             b: '<b>' + "DeForest Buckner" + '</b>',
@@ -279,7 +288,7 @@ var ninerQuestions = [
         correctAnswer: "b"
     },
     {
-        question: '<i>' + "In 1994, the 49ers' most iconic figures -- quarterbacks Steve Young and Joe Montana -- faced off in an unprecedented regular season game. Young played for San Francisco; who did Montana play for?" + '</i>',
+        question: '<i>' + "In the 1994 season, the 49ers' most iconic figures -- quarterbacks Steve Young and Joe Montana -- faced off in an unprecedented regular season game. Young played for San Francisco; who did Montana play for?" + '</i>',
         answers: {
             a: '<b>' + "Minnesota Vikings" + '</b>',
             b: '<b>' + "Buffalo Bills" + '</b>',
@@ -300,7 +309,7 @@ var ninerQuestions = [
         },
         correctAnswer: "c"
     },
-]
+];
 
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
